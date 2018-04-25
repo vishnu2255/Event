@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.footercust {
+	width: 100%;
+	background:#5b5758;
+	
+}
+
+p1 {
+	color:#CCC;
+
+	}
+.sectionwrap {
+	padding-left: 30px;
+	padding-right: 30px;
+	}
+	
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    border:1px solid #ccc;
+}
+
+.formwrap {
+	width: 90%;
+	margin: 0 auto;
+    padding: 10px;
+	color:#FFF;
+	font-family:inherit;
+	}
+	
+	.containerA {
+	text-align:center; 
+	color:#FFF;
+	background-image:url(/img/bg_trans_black.png);
+	background-repeat:repeat;
+	height:87px;
+	max-width:1010px;
+	margin: 0 auto;
+	border:#FFF;
+	border-s
+	}
+	
+	.containerA h2 {
+	font-weight: 300;
+	letter-spacing: 2px;
+	
+	}
+	
+	
+	.formwrap h2 {
+	font-weight: 300;
+	}
+	
+	
+
+@media (max-width: 11921px) {
+    .darkbg {
+	background-color: #;
+	width: 100%;
+	position: absolute;
+	top: 500px;
+	height: 260px;
+}
+
+ .contestsmall {
+	display:none;
+	}
+
+}
+
+@media (min-width: 980px) {
+	
+
+}
+@media (max-width: 981px) {
+    .darkbg {
+	background-color: #000;
+	width: 100%;
+	position: absolute;
+	top: 370px;
+	height: 90px;
+}
+  [class*="col-"] {
+      margin-bottom: 22px;
+  }
+  
+   .contestlarge {
+	display:none;
+	}
+ .contestsmall {
+	display:block;
+	}
+}
+
+@media (max-width: 800px) {
+    .darkbg {
+	background-color: #000;
+	width: 100%;
+	position: absolute;
+	top: 490px;
+	height: 160px;
+}
+  [class*="col-"] {
+      margin-bottom: 22px;
+  }
+  
+
+}
+
+
+@media (max-width: 768px) {
+	.darkbg {
+	background-color: #000;
+	width: 100%;
+	position: absolute;
+	top: 480px;
+	height: 160px;
+}
+
+  [class*="col-"] {
+      margin-bottom: 22px;
+  }
+
+}
+  
+ 
+  
+@media (max-width: 414px) {
+	.darkbg {
+	background-color: #000;
+	width: 100%;
+	position: absolute;
+	top: 290px;
+	height: 210px;
+}
+  
+}
+
