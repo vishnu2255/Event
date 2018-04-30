@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('multiplefiles');
-});
+// Route::get('/', function () {
+//     return view('BannerController@index');
+// });
 
+Route::get('/','BannerController@index');
 
 Route::get('/event',function(){
     return view('event');
@@ -23,6 +24,12 @@ Route::get('/event',function(){
 Route::get('/addfood',function(){
     return view('addfood');
 });
+
+Route::get('/addbanner',function(){
+    return view('postbanners');
+});
+
+Route::post('/postbanner','BannerController@store');
 
 Route::post('/post','EventsController@store');
 
