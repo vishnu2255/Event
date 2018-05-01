@@ -11,11 +11,11 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('BannerController@index');
-// });
+Route::get('/', function () {
+    return view('banners/test');
+});
 
-Route::get('/','BannerController@index');
+// Route::get('/','BannerController@index');
 
 Route::get('/event',function(){
     return view('event');
