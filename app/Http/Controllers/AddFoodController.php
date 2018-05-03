@@ -40,7 +40,7 @@ class AddFoodController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
+        // dd(request()->all());
                 
 if($request->hasFile('flyerimg'))
 {

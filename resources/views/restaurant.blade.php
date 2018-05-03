@@ -103,7 +103,7 @@
 <div class="row" style="width: 800px;height: 600px">
     @include('group3');
 </div>
-</div>
+</div>  
 
 {{-- <div class="container">
     @include('banners.group3');

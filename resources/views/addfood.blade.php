@@ -95,7 +95,7 @@ In this section, you are able to add your food restaurant to our listings for fr
         <div class="col-md-12">
                 <label  for="">Description*</label>
                 <br>
-                <textarea class= "form-control" name="description" id="" rows="5"></textarea>
+                <textarea class= "form-control" name="description" id="article-ckeditor" rows="5"></textarea>
         </div>
         
         </div>
@@ -119,11 +119,11 @@ In this section, you are able to add your food restaurant to our listings for fr
             {{-- <input type="file" class= "form-control" name="flyerimg[]" multiple="multiple" > --}}
         </div>
 
-        <div class="m-2">
+        {{-- <div class="m-2">
             <h4>Food Images</h4>           
-            <label for="file">Choose file to upload</label>
-            <br>
-<div id="filesupload">
+            <label for="file">Choose files to upload</label>
+            <br> --}}
+{{-- <div id="filesupload">
                <div id="file-0"> <input type="file" class= "form-control" value="AddFile" name="uploaded_file[]" multiple></div>
                <div id="file-0"> <input type="file" class= "form-control" value="AddFile" name="uploaded_file[]" multiple></div>
                <div id="file-0"> <input type="file" class= "form-control" value="AddFile" name="uploaded_file[]" ></div>
@@ -131,14 +131,17 @@ In this section, you are able to add your food restaurant to our listings for fr
            
 <br>
             <a class="mb-3 mt-3 btn btn-default" id="imgclick" onclick="addFile()">Click here to add more images</a>
-            <br>
+            <br> --}}
 
-        </div>
+        {{-- </div> --}}
 </div>
 
 <hr>
 
 <div class="form-group">
+                <h4>Food Images</h4>           
+                <label for="file">Choose files to upload</label>
+                <br>
                 <div class="row form-control" id="tempfiles">
                         <div id="file-0">
                                         <input type="file" class= "form-control" value="AddFile" name="uploaded_file[]" multiple>                           
@@ -146,11 +149,15 @@ In this section, you are able to add your food restaurant to our listings for fr
                             
                  </div> 
                  
-                 
+                 <a href="" id="addtempfile">Add Button</a>   
 </div>
-<a href="" id="addtempfile">Add Button</a>
-<button class="btn btn-primary" type="submit">Submit Event</button>
 
+<div class="row form-control">
+               
+                <button class="btn btn-primary" type="submit">Submit Event</button>
+                
+                
+</div>
 
 
 </div>

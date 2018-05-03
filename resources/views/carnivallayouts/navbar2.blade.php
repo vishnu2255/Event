@@ -56,11 +56,7 @@
                       <li role="separator" class="divider"></li>
                   </ul>
         <li><a href="/carnivaldates">Carnival Dates</a></li>
-                  
-        <li><a href="/Carnival_dates.php">Carnival Dates</a></li>
-        <li><a href="/Contact.php">Contact</a></li>
-        
-                  
+        <li><a href="/Contact.php">Contact</a></li>                          
                 </li>
               </ul>
       

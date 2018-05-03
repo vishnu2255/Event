@@ -20,7 +20,12 @@
     <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/script3.js')}}"></script>
-    
+    <script type="text/javascript" src="{{asset('js/script4.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/script5.js')}}"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 
 {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
 
@@ -75,6 +80,10 @@
         </main>
     </div>
 
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>
 

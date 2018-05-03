@@ -95,7 +95,7 @@ In this section, you are able to add your event to our listings for free! For ad
     <div class="col-md-12">
             <label  for="">Description*</label>
             <br>
-            <textarea class= "form-control" name="description" id="" rows="5"></textarea>
+            <textarea class= "form-control" name="description" id="article-ckeditor" rows="5"></textarea>
     </div>
     
     </div>
