@@ -40,25 +40,34 @@
 
   </div>
 
-  <div class="col-md-6 float-right">
+  <div class="col-md-6">
    
     <div class="row">
-
-      <span><b> Cuisine </b></span> &nbsp; &nbsp;
-    <span> {{$rest->cuisine}}</span>
-
+        <div class="col-md-4">
+            <b> Cuisine </b>
+         </div>
+         <div class="col-md-4">
+                 <span> {{$rest->cuisine}}  </span>
+         </div>
     </div>
     <hr>
     <div class="row">
-
-            <span><b> Phone  </b></span>  &nbsp; &nbsp;
-            <span> {{$rest->restphone}}</span>
+        <div class="col-md-4">
+            <b> Phone </b>
+         </div>
+         <div class="col-md-4">
+                 <span> {{$rest->restphone}}  </span>
+         </div>
+           
     </div>
     <hr>
     <div class="row">
-
-            <span><b> Email  </b></span>   &nbsp; &nbsp; 
-            <span> {{$rest->restemail}}</span>
+        <div class="col-md-4">
+            <b> Email </b>
+         </div>
+         <div class="col-md-4">
+                 <span> {{$rest->restemail}}  </span>
+         </div>      
     </div>
     <hr>
     <div class="row">
@@ -88,10 +97,17 @@
     
   </div>
 
-</div>
 
 </div>
 
+<div class="row" style="width: 800px;height: 600px">
+    @include('group3');
+</div>
+</div>
 
+{{-- <div class="container">
+    @include('banners.group3');
+
+</div> --}}
 
 @endsection

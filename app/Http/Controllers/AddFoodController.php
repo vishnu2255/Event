@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\AddFood;
+use App\Banner;
 
 class AddFoodController extends Controller
 {
@@ -130,9 +131,11 @@ return redirect('/');
 
             }
         }
+        //sending banners
+        $banners = Banner::where('group',1)->get();
 
        // print_r($tempfile);
-       return view('restaurant',compact('rest','tempfile'));
+       return view('restaurant',compact('rest','tempfile','banners'));
         //return view('restdetails')->with('rest',$rest);
     }
 
