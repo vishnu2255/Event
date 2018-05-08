@@ -8,7 +8,7 @@
           <p class="lead my-3"> {!!$band->description!!} </p>
           
         </div>
-</div>
+</div> 
 <div class="container">
     
 <div class="row m-2">
