@@ -9,13 +9,13 @@
         
         </div>
 </div>
-<div class="container">
+<div class="container" style="margin-bottom: 10px">
       <div class="row mb-2">
         
         <div class="col-md-6">
         
             <div class="row imagerow">             
-            <img style="width: 100%" src="../storage/coverimages/{{$event->coverimage}}" alt="Event" >
+            <img style="width: 100%" src="/../storage/event/{{$event->coverimage}}" alt="Event" >
             </div>
 
             <br>
@@ -86,8 +86,5 @@
           </div>
         </div>
 
-
-
-        
 
 @endsection

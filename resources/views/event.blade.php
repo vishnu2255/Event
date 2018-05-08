@@ -10,21 +10,14 @@ In this section, you are able to add your event to our listings for free! For ad
 <hr>
 <form action="/post" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
-
-<div class="row form-group">
-
-        <div class="col-md-4">
-                <span class="m-2">Select Destination</span>
-                        <select class="form-control" name="carnivaldest" id="">
-                                        <option value="toronto">Toronto</option>
-                                        <option value="barbados">Barbados</option>
-                                        <option value="guyana">Guyana</option>
-                                        <option value="stlucia">St Lucia</option>
-                                </select>
-        </div>
-
-
-</div>
+<select style="margin:4px" class="form-control input-lg" name="country" id="list" accesskey="target">
+                <option value="">Select A Carnival Desstination</option>
+                <option value="Toronto/">Toronto Canada (Toronto Caribbean Carnival)</option>
+                <option value="Barbados">Barbados (Crop Over)</option>
+                <option value="GUyana">Guyana (Guyana Carnival)</option>
+                
+                 <option value="SaintLucia">St. Lucia (St. Lucia Carnival)</option>&nbsp;&nbsp;
+      <select>
 
 <div class="row form-group">
 
@@ -95,7 +88,7 @@ In this section, you are able to add your event to our listings for free! For ad
     <div class="col-md-12">
             <label  for="">Description*</label>
             <br>
-            <textarea class= "form-control" name="description" id="" rows="5"></textarea>
+            <textarea class= "form-control" name="description" id="article-ckeditor" rows="5"></textarea>
     </div>
     
     </div>

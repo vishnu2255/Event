@@ -1,8 +1,7 @@
-@extends('layouts.app')
-@section('content')
+
 
 <div class="container m-2" style="height: 600px;width: 400px;">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="15000">
         <div class="carousel-inner"> 
     <?php $cnt=0;?>
      @foreach($banners as $banner)
@@ -10,13 +9,13 @@
         @if($cnt == 0)
         <div class="carousel-item active" style="height: 600px;width: 400px;">
         <a href="{{$banner->url}}" target="_blank">        
-             <img style="width: 100%;max- height: 100%"  src="../storage/banners/1/{{$banner->image}}" alt="image">
+             <img style="width: 100%;max- height: 100%"  src="/../storage/banners/1/{{$banner->image}}" alt="image">
          </a>
            </div>
         @else
         <div class="carousel-item" style="height: 600px;width: 400px;">
             <a href="{{$banner->url}}" target="_blank">        
-             <img style="width: 100%;max- height: 100%"  src="../storage/banners/1/{{$banner->image}}" alt="image">
+             <img style="width: 100%;max- height: 100%"  src="/../storage/banners/1/{{$banner->image}}" alt="image">
          </a>
            </div>
         @endif
@@ -39,4 +38,3 @@
         </a>
       </div>
 </div>
-@endsection

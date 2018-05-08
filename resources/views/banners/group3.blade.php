@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container m-2" style="height: 600px;width: 400px;">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" data-interval="15000" class="carousel slide" data-ride="carousel" >
         <div class="carousel-inner"> 
     <?php $cnt=0;?>
      @foreach($banners as $banner)

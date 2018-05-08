@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-3">
+<div class="mt-3" style="margin-left: 10px;">
 
 @foreach($events as $event)
 
-<div class="gallery">
-    <a  href="/eventslist/{{$event->id}}">
-      <img src="storage/coverimages/{{$event->coverimage}}" alt="Event" width="300" height="100">
+<div class="gallery" style="width: 400px;height: 300px;background-color:aliceblue">
+    <a  href="eventslist/{{$event->id}}">
+      <img src="/../storage/event/{{$event->coverimage}}" alt="Event" style="width: 100%;height: 80%">
     </a>
 
-    <div style="font-family: Arial, Helvetica, sans-serif" class="desc">{{$event->eventdescription}}</div>
+    <div style="font-family: Arial, Helvetica, sans-serif; overflow: hidden;text-overflow: ellipsis; white-space: nowrap;" class="desc">{{$event->eventname}}</div>
   </div>
 
 @endforeach
-
+</div>
 @endsection
 {{--   
 <div class="gallery">

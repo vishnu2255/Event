@@ -30,7 +30,7 @@ $fileNameToStore = 'noimg.jpg';
 
 
          $events = new Events;
-
+        $events->country   = $request->input('country');
         $events->eventname = $request->input('name');
         $events->eventclub = $request->input('club');
         $events->eventdate =$request->input('date');
@@ -50,7 +50,6 @@ $fileNameToStore = 'noimg.jpg';
         $events->save();
 return redirect('/');
       
-
     }
 
     public function show()

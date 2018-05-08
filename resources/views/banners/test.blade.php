@@ -5,6 +5,8 @@
     <div class="col-sm-6"></div>
 </div>
 <br>
+
+
 <body style="background-image:  url('../storage/banners/main.jpg');background-repeat: no-repeat;">
     
 <div class="container" style="margin-top: 10px;">
@@ -12,7 +14,7 @@
 <div class="row" style="margin-top: 200px">
 
 <div class="col-md-6">
-
+<b></b>
 </div>
 <div class="col-md-5" style="margin-left: 90px ;background-image:  url('../storage/banners/white.png'); background-repeat: repeat">
         <form action="" method="post"> 

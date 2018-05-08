@@ -16,12 +16,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
             <li><a href="/index.php">Home</a></li>
-              <li><a href="#">Bands</a></li>
-           <li><a href="#">Costumes</a></li>
+              <li><a href="/bandslist">Bands</a></li>
+           <li><a href="/costumeslist">Costumes</a></li>
          <li><a href="/eventslist">Events</a></li>
-               <li><a href="#">Food</a></li>
+               <li><a href="/restaurantslist">Food</a></li>
                 <li><a href="#">Accommodations</a></li>
-               <li><a href="#">Packages</a></li>
+               <li><a href="/packageslist">Packages</a></li>
             
           
                 
@@ -56,11 +56,7 @@
                       <li role="separator" class="divider"></li>
                   </ul>
         <li><a href="/carnivaldates">Carnival Dates</a></li>
-                  
-        <li><a href="/Carnival_dates.php">Carnival Dates</a></li>
-        <li><a href="/Contact.php">Contact</a></li>
-        
-                  
+        <li><a href="/Contact.php">Contact</a></li>                          
                 </li>
               </ul>
       

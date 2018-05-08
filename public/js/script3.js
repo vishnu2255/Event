@@ -54,6 +54,8 @@ return false;
 });
 });
 
+
+
 function remove()
 {
 var id = $(this).attr("id");

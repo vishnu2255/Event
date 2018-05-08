@@ -16,10 +16,41 @@ class AddFoodController extends Controller
     public function index()
     {
         //
-     $rests = AddFood::all();
+        // $cntry= request()->path();
+        // var_dump($cntry);
+    //  $rests = AddFood::all();
+    // return view('restaurantlist')->with('rests',$rests);
+    $uri= request()->path();
+    $path = explode("/",$uri);
+
+    $cntry = $path[0];
+
+   // var_dump($cntry);
+
+    switch ($cntry)
+    {
+        case "Toronto_Caribbean_Carnival":
+        $val = "Toronto";
+        break;           
+        case "Crop_Over":
+        $val ="Barbados";
+        break;            
+
+        case "Guyana_Carnival":
+        $val ="Guyana";
+        break;           
+
+        case "Saint_Lucia_Carnival":
+        $val="SaintLucia";
+        break;
+
+    }
+    // $val = strtolower($val);
+    $rests =AddFood::where('country',$val)->get();
+
+    // print_r($bands);
+    // return view('bandslist')->with('bands',$bands);
     return view('restaurantlist')->with('rests',$rests);
-
-
     }
 
     /**
@@ -40,7 +71,7 @@ class AddFoodController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
+        // dd(request()->all());
                 
 if($request->hasFile('flyerimg'))
 {
@@ -87,6 +118,7 @@ $path = $file->storeAs($fol,$tempfileNameToStore);
     //    dd($folderpath);
           $res = new AddFood;
 
+          $res->country = $request->input('country');
         $res->restName = $request->input('name');
         $res->cuisine = $request->input('cuisine');
        
@@ -113,12 +145,12 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($country,$id)
     {
         //
         $rest = AddFood::where('id',$id)->first();
-
-        $dir = 'storage/restaurant/' . $rest->restName . '/';
+        $dir = $_SERVER['DOCUMENT_ROOT'] . 'storage/restaurant/' . $rest->restName ;
+        // $dir = 'storage/restaurant/' . $rest->restName . '/';
         $files1 = scandir($dir);
        // print_r($files1);
         $tempfile = array();
@@ -134,7 +166,7 @@ return redirect('/');
         //sending banners
         $banners = Banner::where('group',1)->get();
 
-       // print_r($tempfile);
+    //    print_r($tempfile);
        return view('restaurant',compact('rest','tempfile','banners'));
         //return view('restdetails')->with('rest',$rest);
     }
