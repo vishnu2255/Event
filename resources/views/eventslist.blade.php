@@ -6,8 +6,8 @@
 @foreach($events as $event)
 
 <div class="gallery" style="width: 400px;height: 300px;background-color:aliceblue">
-    <a  href="/eventslist/{{$event->id}}">
-      <img src="storage/coverimages/{{$event->coverimage}}" alt="Event" style="width: 100%;height: 80%">
+    <a  href="eventslist/{{$event->id}}">
+      <img src="/../storage/event/{{$event->coverimage}}" alt="Event" style="width: 100%;height: 80%">
     </a>
 
     <div style="font-family: Arial, Helvetica, sans-serif; overflow: hidden;text-overflow: ellipsis; white-space: nowrap;" class="desc">{{$event->eventname}}</div>

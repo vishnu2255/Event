@@ -5,9 +5,10 @@
 <div class="jumbotron p-3 p-md-5 text-dark rounded bg-light">
         <div class="col-md-6 px-0">
           <h1 class="display-4 font-italic">{{$rest->restName}}</h1>
-          <p class="lead my-3">{{$rest->restdescription}}</p>
+          <p class="lead my-3"> {!!$rest->restdescription!!}</p>
         
         </div>
+       
 </div>
 <div class="container">
     
@@ -15,7 +16,7 @@
 
   <div class="col-md-6">
 <div class="row imagerow"> 
-<img class="restmain" id ="mainresimage" src="/storage/restaurant/{{$rest->restName}}/{{$rest->restimage}}" onclick="displayImage()"/>
+<img class="restmain" id ="mainresimage" src="/../storage/restaurant/{{$rest->restName}}/{{$rest->restimage}}" onclick="displayImage()"/>
 </div>
 <br>
 <div class="row" style="display:inline-block">
@@ -23,7 +24,7 @@
 @foreach($tempfile as $file)
 
 
-  <img class="lightbox" src="/storage/restaurant/{{$rest->restName}}/{{$file}}" id="" onclick="displayImage()"/>
+  <img class="lightbox" src="/../storage/restaurant/{{$rest->restName}}/{{$file}}" id="" onclick="displayImage()"/>
    
  {{-- <div class="lightbox-target" id="img">
        {{-- <img src="/storage/coverimages/party_1524175748.jpg" alt="">  --}}

@@ -15,7 +15,35 @@ class CostumeController extends Controller
     public function index()
     {
         //
-        $costumes = Costume::all();
+        $uri= request()->path();
+        $path = explode("/",$uri);
+
+        $cntry = $path[0];
+
+       // var_dump($cntry);
+
+        switch ($cntry)
+        {
+            case "Toronto_Caribbean_Carnival":
+            $val = "Toronto";
+            break;           
+            case "Crop_Over":
+            $val ="Barbados";
+            break;            
+
+            case "Guyana_Carnival":
+            $val ="Guyana";
+            break;           
+
+            case "Saint_Lucia_Carnival":
+            $val="SaintLucia";
+            break;
+
+        }
+        $val = strtolower($val);
+        // echo($val);
+        $costumes = Costume::where('country',$val)->get();
+        // print_r($costumes);
         return view("costumeslist")->with('costumes',$costumes);
     }
 
@@ -79,8 +107,8 @@ $path = $file->storeAs($fol,$tempfileNameToStore);
 }
 }
     //    dd($folderpath);
-          $costume = new Costume;
-        
+        $costume = new Costume;
+        $costume->country = $request->input('country'); 
         $costume->band = $request->input('name');
         $costume->section = $request->input('section');
         $costume->description = $request->input('description');
@@ -116,14 +144,22 @@ return redirect('/');
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($country,$id)
     {
         //
-
+// return  $id;
         $costume = Costume::where('id',$id)->first();
-        //$dir = 'storage/restaurant/' . $rest->restName . '/';
-        $dir = 'storage/costume/'.$costume->band. '_'.$costume->section .'/';
+        
+        // print_r($costume);
+
+        // $dir = 'public/costume/'.$costume->band. '_'.$costume->section .'/';
+       
+        $dir = $_SERVER['DOCUMENT_ROOT'] . 'storage/costume/' . $costume->band . '_' . $costume->section;
+
+        // $folder = 'public/costume/vb_ser/';
         $files1 = scandir($dir);
+
+       // var_dump($files1);
        // print_r($files1);
         $tempfile = array();
 

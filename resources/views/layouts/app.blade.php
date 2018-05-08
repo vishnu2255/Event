@@ -50,13 +50,14 @@
 }
     </style> --}}
 </head>
-<body>
+<body style="margin-bottom: 5px">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand ml-auto" href="#"><img src="http://carnivalguideintl.com/img/Carnival_guide_intl_logo.png"></a>
+                {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Carnival') }}
-                </a>
+                </a> --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,9 +65,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-<li>  <a class="navbar-brand nav-item" href="">Event</a></li>
-<li>  <a class="navbar-brand nav-item" href="">Restaurant</a> </li>
-<li>  <a class="navbar-brand nav-item" href="">Band</a> </li>
+                            <li><a class="navbar-brand nav-item" href="/index.php">Home</a></li>
+                            <li><a class="navbar-brand nav-item" href="/bandslist">Bands</a></li>
+                         <li><a class="navbar-brand nav-item" href="/costumeslist">Costumes</a></li>
+                       <li><a class="navbar-brand nav-item" href="/eventslist">Events</a></li>
+                             <li><a class="navbar-brand nav-item" href="/restaurantslist">Food</a></li>
+                              <li><a class="navbar-brand nav-item" href="#">Accommodations</a></li>
+                             <li><a class="navbar-brand nav-item" href="/packageslist">Packages</a></li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -84,7 +90,17 @@
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>
+
+{{-- @include('carnivallayouts.footer2'); --}}
+    
+    {{-- @include('layouts/footer'); --}}
+    {{-- <nav class="navbar fixed-bottom navbar-light bg-dark" style="margin-top: 10px">
+        <a class="navbar-brand" href="#">Fixed bottom</a>
+      </nav>  --}}
+    
 </body>
+
+
 </html>
 
 

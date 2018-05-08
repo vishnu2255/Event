@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Band;
+use App\Package;
 
-class BandController extends Controller
+class PackageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,39 +13,39 @@ class BandController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-        //return 1;
-        $uri= request()->path();
-        $path = explode("/",$uri);
-
-        $cntry = $path[0];
-
-       // var_dump($cntry);
-
-        switch ($cntry)
-        {
-            case "Toronto_Caribbean_Carnival":
-            $val = "Toronto";
-            break;           
-            case "Crop_Over":
-            $val ="Barbados";
-            break;            
-
-            case "Guyana_Carnival":
-            $val ="Guyana";
-            break;           
-
-            case "Saint_Lucia_Carnival":
-            $val="SaintLucia";
-            break;
-
-        }
-        // $val = strtolower($val);
-        $bands =Band::where('country',$val)->get();
-
-        // print_r($bands);
-        return view('bandslist')->with('bands',$bands);
+{                   
+          $uri= request()->path();
+          $path = explode("/",$uri);
+      
+          $cntry = $path[0];
+      
+         // var_dump($cntry);
+      
+          switch ($cntry)
+          {
+              case "Toronto_Caribbean_Carnival":
+              $val = "Toronto";
+              break;           
+              case "Crop_Over":
+              $val ="Barbados";
+              break;            
+      
+              case "Guyana_Carnival":
+              $val ="Guyana";
+              break;           
+      
+              case "Saint_Lucia_Carnival":
+              $val="SaintLucia";
+              break;      
+          }
+          // $val = strtolower($val);
+        //   $rests =AddFood::where('country',$val)->get();
+      
+          // print_r($bands);
+          // return view('bandslist')->with('bands',$bands);
+        //   return view('restaurantlist')->with('rests',$rests);
+          $packs =Package::where('country',$val)->get();
+          return view('packageslist')->with('packs',$packs);
     }
 
     /**
@@ -66,19 +66,16 @@ class BandController extends Controller
      */
     public function store(Request $request)
     {
-        //
-       // $band =new Band();
 
+        // dd(request()->all());
         if($request->hasFile('flyerimg'))
         {
             $filewithExt= $request->file('flyerimg')->getClientOriginalName();
-
             $fileName = pathinfo($filewithExt,PATHINFO_FILENAME);
-
             $fileExt = $request->file('flyerimg')->getClientOriginalExtension();
             $fileNameToStore = $fileName.'_flyer_'.time().'.'.$fileExt;
             //UPload Image
-            $folderpath = 'public/band/'.$request->input('name') .'/';
+            $folderpath = 'public/package/'.$request->input('name') .'/';
             $path = $request->file('flyerimg')->storeAs($folderpath,$fileNameToStore);
         }
         else{
@@ -90,7 +87,7 @@ if($request->hasFile('uploaded_file'))
 {
     $files = $request->file('uploaded_file');
     // var_dump($files);
-   $fol =  'public/band/'.$request->input('name') .'/';
+   $fol =  'public/package/'.$request->input('name') .'/';
 
 
 foreach($files as $file)
@@ -104,20 +101,16 @@ $tempfileNameToStore = $tempfilename . '_'.time().'.'.$tempfileext;
 $path = $file->storeAs($fol,$tempfileNameToStore);
 }
 }
-           $band = new Band();
-           $band->country = $request->input('country');
-           $band->name = $request->input('name');
-           $band->type = $request->input('type');
-           $band->address = $request->input('address');
-           $band->phone=$request->input('phone');
-           $band->email=$request->input('email');
-           
-           $band->zip =$request->input('zip');
-           $band->city =$request->input('city');
-           $band->description = $request->input('description');
-           $band->image= $fileNameToStore;
+           $pack = new Package();
+           $pack->country = $request->input('country');
+           $pack->name = $request->input('name');
+          
+           $pack->phone=$request->input('phone');
+           $pack->email=$request->input('email');
+           $pack->description = $request->input('description');
+           $pack->image= $fileNameToStore;
 
-           $band->save();
+           $pack->save();
 
            return redirect('/');
 
@@ -131,24 +124,16 @@ $path = $file->storeAs($fol,$tempfileNameToStore);
      */
     public function show($country,$id)
     {
-        //
 
         // return $id;
-        $band= Band::where('id',$id)->first();
-
-        // var_dump($band);
-        // public\storage\band
-        // \app\public\band
-        // $dir = 'public://public/band/' . $band->name . '/';
+        $pack= Package::where('id',$id)->first();
+        // $rest = AddFood::where('id',$id)->first();
+        $dir = $_SERVER['DOCUMENT_ROOT'] . 'storage/package/' . $pack->name ;
+        // $dir = 'storage/restaurant/' . $rest->restName . '/';
+        $files1 = scandir($dir);
+        // $dir = 'storage/package/' . $pack->name . '/';
         // $files1 = scandir($dir);
-        // $d = 'C:\xampp\htdocs\event\storage\app\public\band\';
-        //  . $band->name;
-        // echo $_SERVER['DOCUMENT_ROOT'];
-        $dir = $_SERVER['DOCUMENT_ROOT'] . 'storage/band/' . $band->name ;
-        //  echo $dir;
-
-        $files1 = scandir($dir);         
-        // print_r($files1);
+       // print_r($files1);
         $tempfile = array();
 
         foreach($files1 as $fl)
@@ -159,8 +144,8 @@ $path = $file->storeAs($fol,$tempfileNameToStore);
 
             }
         }
-        //print_r($tempfile);
-        return view('band',compact('band','tempfile'));
+
+        return view('package',compact('pack','tempfile'));
 
     }
 

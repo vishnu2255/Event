@@ -11,6 +11,17 @@ In this section, you are able to add your band to our listings for free! For add
 <form action="/postband" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
     
+
+
+ <select style="margin:4px" class="form-control input-lg" name="country" id="list" accesskey="target">
+                <option value="">Select A Carnival Desstination</option>
+            <option value="toronto">Toronto Canada (Toronto Caribbean Carnival)</option>
+            <option value="barbados">Barbados (Crop Over)</option>
+            <option value="guyana">Guyana (Guyana Carnival)</option>
+            
+             <option value="saintlucia">St. Lucia (St. Lucia Carnival)</option>&nbsp;&nbsp;
+  <select>
+
 <div class="row form-group">
 
         <div class="col-md-4">

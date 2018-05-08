@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Event extends Controller
+class MainController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +14,7 @@ class Event extends Controller
     public function index()
     {
         //
+        return view('carnival/index');
     }
 
     /**
@@ -35,8 +36,6 @@ class Event extends Controller
     public function store(Request $request)
     {
         //
-
-        return 1;
     }
 
     /**
@@ -45,10 +44,28 @@ class Event extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
-        return 1234;
+        $cntry= request()->path();
+        // var_dump($cntry);
+
+        switch ($cntry)
+        {
+            case "Toronto_Caribbean_Carnival":
+            return view('carnival.torontocarnival');
+
+            case "Crop_Over":
+            return view('carnival.barbadoscarnival');
+
+            case "Guyana_Carnival":
+            return view('carnival.guyanacarnival');
+
+            case "Saint_Lucia_Carnival":
+            return view('carnival.luciascarnival');
+
+        }
+        // return 123;
     }
 
     /**
@@ -84,5 +101,4 @@ class Event extends Controller
     {
         //
     }
-
 }

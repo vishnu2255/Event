@@ -84,7 +84,6 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>
  
 <!-- NAVBAR
 ================================================== -->  
@@ -95,8 +94,9 @@
 
 @yield('content')    
 
-    @include('carnivallayouts.footer');
+    
     
 
 </body>
+@include('carnivallayouts.footer');
 </html>

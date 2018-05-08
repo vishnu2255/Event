@@ -45,8 +45,7 @@
             <a class="btn btn-warning m-2" href="/addband" >Add Band</a>
             <a class="btn btn-warning m-2"  href="/addcostume" >Add Costumes</a>
             <a class="btn btn-warning m-2"  href="/addbanner" >Add Banner</a>
-
-
+            <a class="btn btn-warning m-2"  href="/addpackage" >Add Package</a>
 
         </div>    
 </body>

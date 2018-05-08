@@ -2,9 +2,7 @@
 
 @section('content')
 
-<div class="container m-3" id="maincostumediv">
-       
-       
+<div class="container m-3" id="maincostumediv">               
         <h1 class="m-2"> Costume Submission</h1>
         <p class="m-2">
         In this section, you are able to add your costume to our listings for free! For additional exposure, there is an option of adding banners and making your event a featured venue. To view our media kit and ad rates, please send us an email at  
@@ -13,6 +11,14 @@
         <form action="/postcostume" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
 
+        <select style="margin:4px" class="form-control input-lg" name="country" id="list" accesskey="target">
+                        <option value="">Select A Carnival Desstination</option>
+                    <option value="Toronto">Toronto Canada (Toronto Caribbean Carnival)</option>
+                    <option value="Barbados">Barbados (Crop Over)</option>
+                    <option value="GUyana">Guyana (Guyana Carnival)</option>
+                    
+                     <option value="SaintLucia">St. Lucia (St. Lucia Carnival)</option>&nbsp;&nbsp;
+          <select>
 <div class="row">
         <div class="col-md-4">                
                 <input id="name" name="name" placeholder="Band name" type="text" class= "form-control"> 
