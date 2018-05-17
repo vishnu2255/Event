@@ -9,16 +9,16 @@
           
         </div>
 </div> 
-<div class="container">
+<div class="container" style="border: lightcoral">
     
-<div class="row m-2">
+<div class="row" style="margin-top: 2px">
 
   <div class="col-md-6">
 <div class="row imagerow"> 
 <img class="restmain" id ="mainresimage" src="/storage/band/{{$band->name}}/{{$band->image}}" onclick="displayImage()"/>
 </div>
 <br>
-<div class="row" style="display:inline-block">
+<div class="row" style="display:inline-block;float: left">
 
 @foreach($tempfile as $file)
 
@@ -81,6 +81,10 @@
 
 
 </div>
+</div>
+
+<div>
+  TESTING DIV
 </div>
 
 

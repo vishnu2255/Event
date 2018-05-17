@@ -96,7 +96,8 @@ $fileNameToStore = 'noimg.jpg';
 
 // print_r($files1);
 
-
+// $_POST->hasfi;
+// $request->hasf
 if($request->hasFile('uploaded_file'))
 {
     $files = $request->file('uploaded_file');

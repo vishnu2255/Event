@@ -39,9 +39,10 @@ div.restflyer{
     .lightbox {
     height: 100px;
     width: 150px;
-    border: 3px solid white;
-    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-    margin: 2px;
+    /* border: 1px solid white; */
+    /* box-shadow: 0px 0px 8px rgba(0,0,0,.3); */
+    margin-right: 2px;
+    margin-bottom: 2px;
     }
     
     /* Styles the lightbox, removes it from sight and adds the fade-in transition */
